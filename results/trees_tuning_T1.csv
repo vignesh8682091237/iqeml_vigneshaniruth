@@ -1,0 +1,79 @@
+arm,week,hp,val_auc
+B1_LogReg,12,{'C': 0.01},0.62275
+B1_LogReg,12,{'C': 0.1},0.62362
+B1_LogReg,12,{'C': 1.0},0.62375
+B1_LogReg,12,{'C': 10.0},0.62376
+B2_RF,12,"{'max_depth': 6, 'min_samples_leaf': 1}",0.65208
+B2_RF,12,"{'max_depth': 6, 'min_samples_leaf': 10}",0.65233
+B2_RF,12,"{'max_depth': 12, 'min_samples_leaf': 1}",0.63236
+B2_RF,12,"{'max_depth': 12, 'min_samples_leaf': 10}",0.64559
+B2_RF,12,"{'max_depth': 20, 'min_samples_leaf': 1}",0.62367
+B2_RF,12,"{'max_depth': 20, 'min_samples_leaf': 10}",0.64129
+B3_HistGB,12,"{'learning_rate': 0.03, 'max_depth': 3}",0.65143
+B3_HistGB,12,"{'learning_rate': 0.03, 'max_depth': 6}",0.64971
+B3_HistGB,12,"{'learning_rate': 0.1, 'max_depth': 3}",0.65358
+B3_HistGB,12,"{'learning_rate': 0.1, 'max_depth': 6}",0.64272
+A0_RF,12,"{'max_depth': 6, 'min_samples_leaf': 1}",0.64518
+A0_RF,12,"{'max_depth': 6, 'min_samples_leaf': 10}",0.64339
+A0_RF,12,"{'max_depth': 12, 'min_samples_leaf': 1}",0.62814
+A0_RF,12,"{'max_depth': 12, 'min_samples_leaf': 10}",0.6331
+A0_RF,12,"{'max_depth': 20, 'min_samples_leaf': 1}",0.60671
+A0_RF,12,"{'max_depth': 20, 'min_samples_leaf': 10}",0.6299
+A1_RF,12,"{'max_depth': 6, 'min_samples_leaf': 1}",0.66377
+A1_RF,12,"{'max_depth': 6, 'min_samples_leaf': 10}",0.66128
+A1_RF,12,"{'max_depth': 12, 'min_samples_leaf': 1}",0.64707
+A1_RF,12,"{'max_depth': 12, 'min_samples_leaf': 10}",0.65969
+A1_RF,12,"{'max_depth': 20, 'min_samples_leaf': 1}",0.64597
+A1_RF,12,"{'max_depth': 20, 'min_samples_leaf': 10}",0.66287
+B1_LogReg,8,{'C': 0.01},0.62533
+B1_LogReg,8,{'C': 0.1},0.62857
+B1_LogReg,8,{'C': 1.0},0.6289
+B1_LogReg,8,{'C': 10.0},0.62892
+B2_RF,8,"{'max_depth': 6, 'min_samples_leaf': 1}",0.66573
+B2_RF,8,"{'max_depth': 6, 'min_samples_leaf': 10}",0.66389
+B2_RF,8,"{'max_depth': 12, 'min_samples_leaf': 1}",0.65235
+B2_RF,8,"{'max_depth': 12, 'min_samples_leaf': 10}",0.66409
+B2_RF,8,"{'max_depth': 20, 'min_samples_leaf': 1}",0.63941
+B2_RF,8,"{'max_depth': 20, 'min_samples_leaf': 10}",0.66385
+B3_HistGB,8,"{'learning_rate': 0.03, 'max_depth': 3}",0.67029
+B3_HistGB,8,"{'learning_rate': 0.03, 'max_depth': 6}",0.66097
+B3_HistGB,8,"{'learning_rate': 0.1, 'max_depth': 3}",0.67172
+B3_HistGB,8,"{'learning_rate': 0.1, 'max_depth': 6}",0.65783
+A0_RF,8,"{'max_depth': 6, 'min_samples_leaf': 1}",0.66548
+A0_RF,8,"{'max_depth': 6, 'min_samples_leaf': 10}",0.6652
+A0_RF,8,"{'max_depth': 12, 'min_samples_leaf': 1}",0.64745
+A0_RF,8,"{'max_depth': 12, 'min_samples_leaf': 10}",0.65846
+A0_RF,8,"{'max_depth': 20, 'min_samples_leaf': 1}",0.63382
+A0_RF,8,"{'max_depth': 20, 'min_samples_leaf': 10}",0.65304
+A1_RF,8,"{'max_depth': 6, 'min_samples_leaf': 1}",0.66283
+A1_RF,8,"{'max_depth': 6, 'min_samples_leaf': 10}",0.66721
+A1_RF,8,"{'max_depth': 12, 'min_samples_leaf': 1}",0.65424
+A1_RF,8,"{'max_depth': 12, 'min_samples_leaf': 10}",0.66148
+A1_RF,8,"{'max_depth': 20, 'min_samples_leaf': 1}",0.64882
+A1_RF,8,"{'max_depth': 20, 'min_samples_leaf': 10}",0.66139
+B1_LogReg,4,{'C': 0.01},0.63987
+B1_LogReg,4,{'C': 0.1},0.64208
+B1_LogReg,4,{'C': 1.0},0.64237
+B1_LogReg,4,{'C': 10.0},0.6424
+B2_RF,4,"{'max_depth': 6, 'min_samples_leaf': 1}",0.65816
+B2_RF,4,"{'max_depth': 6, 'min_samples_leaf': 10}",0.65854
+B2_RF,4,"{'max_depth': 12, 'min_samples_leaf': 1}",0.64857
+B2_RF,4,"{'max_depth': 12, 'min_samples_leaf': 10}",0.65733
+B2_RF,4,"{'max_depth': 20, 'min_samples_leaf': 1}",0.63456
+B2_RF,4,"{'max_depth': 20, 'min_samples_leaf': 10}",0.65176
+B3_HistGB,4,"{'learning_rate': 0.03, 'max_depth': 3}",0.65721
+B3_HistGB,4,"{'learning_rate': 0.03, 'max_depth': 6}",0.65099
+B3_HistGB,4,"{'learning_rate': 0.1, 'max_depth': 3}",0.65657
+B3_HistGB,4,"{'learning_rate': 0.1, 'max_depth': 6}",0.64717
+A0_RF,4,"{'max_depth': 6, 'min_samples_leaf': 1}",0.66018
+A0_RF,4,"{'max_depth': 6, 'min_samples_leaf': 10}",0.65976
+A0_RF,4,"{'max_depth': 12, 'min_samples_leaf': 1}",0.64288
+A0_RF,4,"{'max_depth': 12, 'min_samples_leaf': 10}",0.65129
+A0_RF,4,"{'max_depth': 20, 'min_samples_leaf': 1}",0.61865
+A0_RF,4,"{'max_depth': 20, 'min_samples_leaf': 10}",0.64727
+A1_RF,4,"{'max_depth': 6, 'min_samples_leaf': 1}",0.65903
+A1_RF,4,"{'max_depth': 6, 'min_samples_leaf': 10}",0.65968
+A1_RF,4,"{'max_depth': 12, 'min_samples_leaf': 1}",0.64942
+A1_RF,4,"{'max_depth': 12, 'min_samples_leaf': 10}",0.65734
+A1_RF,4,"{'max_depth': 20, 'min_samples_leaf': 1}",0.63678
+A1_RF,4,"{'max_depth': 20, 'min_samples_leaf': 10}",0.6568

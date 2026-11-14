@@ -1,0 +1,61 @@
+tune A4-ring-w 8 0.001 val AUC 0.7524 ep 52
+tune A4-ring-w 8 0.003 val AUC 0.7604 ep 31
+tune A4-ring-w 8 0.01 val AUC 0.7605 ep 10
+tune A4-ring-w 8 0.03 val AUC 0.7636 ep 8
+refit A2-w 8 0 test AUC 0.7647 (lr 0.03, 4 epochs) 0s
+refit A2-w 8 1 test AUC 0.7626 (lr 0.03, 4 epochs) 0s
+refit A2-w 8 2 test AUC 0.7624 (lr 0.03, 4 epochs) 0s
+refit A2-w 8 3 test AUC 0.7702 (lr 0.03, 4 epochs) 0s
+refit A2-w 8 4 test AUC 0.7628 (lr 0.03, 4 epochs) 0s
+refit A2s-w 8 0 test AUC 0.7517 (lr 0.03, 9 epochs) 0s
+refit A2s-w 8 1 test AUC 0.7498 (lr 0.03, 9 epochs) 0s
+refit A2s-w 8 2 test AUC 0.7084 (lr 0.03, 9 epochs) 0s
+refit A2s-w 8 3 test AUC 0.7691 (lr 0.03, 9 epochs) 0s
+refit A2s-w 8 4 test AUC 0.7619 (lr 0.03, 9 epochs) 0s
+refit A4-ring-w 8 0 test AUC 0.7676 (lr 0.03, 9 epochs) 5s
+refit A4-ring-w 8 1 test AUC 0.7542 (lr 0.03, 9 epochs) 5s
+refit A4-ring-w 8 2 test AUC 0.7420 (lr 0.03, 9 epochs) 5s
+refit A4-ring-w 8 3 test AUC 0.7554 (lr 0.03, 9 epochs) 5s
+refit A4-ring-w 8 4 test AUC 0.7550 (lr 0.03, 9 epochs) 4s
+tune A2-w 4 0.0003 val AUC 0.7221 ep 58
+tune A2-w 4 0.001 val AUC 0.7235 ep 20
+tune A2-w 4 0.003 val AUC 0.7242 ep 10
+tune A2-w 4 0.01 val AUC 0.7252 ep 4
+tune A2-w 4 0.03 val AUC 0.7306 ep 7
+tune A2s-w 4 0.0003 val AUC 0.6946 ep 59
+tune A2s-w 4 0.001 val AUC 0.6972 ep 31
+tune A2s-w 4 0.003 val AUC 0.7000 ep 26
+tune A2s-w 4 0.01 val AUC 0.7004 ep 12
+tune A2s-w 4 0.03 val AUC 0.7205 ep 7
+tune A4-ring-w 4 0.0003 val AUC 0.7021 ep 59
+tune A4-ring-w 4 0.001 val AUC 0.7210 ep 49
+tune A4-ring-w 4 0.003 val AUC 0.7157 ep 24
+tune A4-ring-w 4 0.01 val AUC 0.7136 ep 7
+tune A4-ring-w 4 0.03 val AUC 0.7098 ep 15
+refit A2-w 4 0 test AUC 0.7230 (lr 0.03, 8 epochs) 0s
+refit A2-w 4 1 test AUC 0.7229 (lr 0.03, 8 epochs) 0s
+refit A2-w 4 2 test AUC 0.7232 (lr 0.03, 8 epochs) 0s
+refit A2-w 4 3 test AUC 0.7355 (lr 0.03, 8 epochs) 0s
+refit A2-w 4 4 test AUC 0.7318 (lr 0.03, 8 epochs) 0s
+refit A2s-w 4 0 test AUC 0.7117 (lr 0.03, 8 epochs) 0s
+refit A2s-w 4 1 test AUC 0.7164 (lr 0.03, 8 epochs) 0s
+refit A2s-w 4 2 test AUC 0.6834 (lr 0.03, 8 epochs) 0s
+refit A2s-w 4 3 test AUC 0.7285 (lr 0.03, 8 epochs) 0s
+refit A2s-w 4 4 test AUC 0.7258 (lr 0.03, 8 epochs) 0s
+refit A4-ring-w 4 0 test AUC 0.7131 (lr 0.001, 50 epochs) 29s
+refit A4-ring-w 4 1 test AUC 0.7109 (lr 0.001, 50 epochs) 31s
+refit A4-ring-w 4 2 test AUC 0.7119 (lr 0.001, 50 epochs) 30s
+refit A4-ring-w 4 3 test AUC 0.7203 (lr 0.001, 50 epochs) 27s
+refit A4-ring-w 4 4 test AUC 0.7206 (lr 0.001, 50 epochs) 29s
+Traceback (most recent call last):
+  File "/mnt/user-data/outputs/IQEL-NET_Q1_UPGRADE_V13/experimental_code/e10_noise.py", line 34, in <module>
+    counts = np.stack([rng.multinomial(S, pr / pr.sum()) for pr in probs]); zhat = counts @ zzs / S
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "numpy/random/mtrand.pyx", line 4394, in numpy.random.mtrand.RandomState.multinomial
+ValueError: sum(pvals[:-1].astype(np.float64)) > 1.0. The pvals array is cast to 64-bit floating point prior to checking the sum. Precision changes when casting may cause problems even if the sum of the original pvals is valid.
+Traceback (most recent call last):
+  File "/mnt/user-data/outputs/IQEL-NET_Q1_UPGRADE_V13/experimental_code/run_v13_chain.py", line 7, in <module>
+    subprocess.run([py, "e10_noise.py"], check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', 'e10_noise.py']' returned non-zero exit status 1.

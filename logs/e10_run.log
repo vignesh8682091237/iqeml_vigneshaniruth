@@ -1,0 +1,20 @@
+seed 0 ideal AUC 0.7501 (stored 0.7501)
+seed 1 ideal AUC 0.7644 (stored 0.7644)
+seed 2 ideal AUC 0.7489 (stored 0.7489)
+seed 3 ideal AUC 0.7556 (stored 0.7556)
+seed 4 ideal AUC 0.7707 (stored 0.7707)
+        cond    level   mean    std    min
+depolarising     0.01 0.7578 0.0093 0.7487
+depolarising     0.05 0.7572 0.0092 0.7477
+depolarising     0.10 0.7562 0.0090 0.7464
+depolarising     0.20 0.7532 0.0086 0.7428
+       ideal     0.00 0.7579 0.0094 0.7489
+readout_flip     0.01 0.7574 0.0093 0.7480
+readout_flip     0.02 0.7567 0.0091 0.7470
+readout_flip     0.05 0.7535 0.0086 0.7432
+readout_flip     0.10 0.7444 0.0083 0.7336
+       shots    10.00 0.6999 0.0114 0.6745
+       shots   100.00 0.7489 0.0075 0.7373
+       shots  1000.00 0.7571 0.0083 0.7459
+       shots 10000.00 0.7578 0.0084 0.7483
+reproducibility: ideal matches stored e6 value for 5 of 5 seeds

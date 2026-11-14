@@ -1,0 +1,137 @@
+{
+  "purpose": "E6 presentation-held-out validation + E3 topology ablation + E1 parameter-matched control",
+  "dataset": "OULAD (Kuzilek et al. 2017), target T2 = Withdrawn+Fail vs Pass+Distinction",
+  "checkpoints_weeks": [
+    4,
+    8,
+    12
+  ],
+  "checkpoint_days": {
+    "4": 28,
+    "8": 56,
+    "12": 84
+  },
+  "cohort_rule": "students unregistered on or before the checkpoint day are excluded",
+  "protocol": {
+    "tuning_train": [
+      "2013B",
+      "2013J"
+    ],
+    "validation": [
+      "2014B"
+    ],
+    "refit_train": [
+      "2013B",
+      "2013J",
+      "2014B"
+    ],
+    "test": [
+      "2014J"
+    ],
+    "test_evaluated": "once, after hyperparameters are fixed",
+    "tuning_seed": 0,
+    "refit_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "preprocessing": "signed log1p then z-score; statistics fitted on the rows used for fitting only"
+  },
+  "quantum": {
+    "qubits_per_register": 4,
+    "topologies": [
+      "intra",
+      "pair",
+      "ring",
+      "all"
+    ],
+    "gates": "RY encoding, CNOT ring per register, CRY, trainable RY(phi); real amplitudes",
+    "simulator": "custom batched JAX statevector, verified against PennyLane default.qubit",
+    "circuit_params_n4": {
+      "intra": 8,
+      "pair": 12,
+      "ring": 16,
+      "all": 40
+    }
+  },
+  "neural_training": {
+    "optimizer": "Adam (own implementation)",
+    "batch_size": 512,
+    "max_epochs": 60,
+    "early_stopping_patience": 6,
+    "lr_grid": [
+      0.003,
+      0.01
+    ],
+    "loss": "0.706*focal+0.294*label_smoothing (A5: 0.6/0.25 + 0.15*supervised contrastive, tau=0.07); weights fixed, NOT tuned",
+    "focal": {
+      "alpha": 0.25,
+      "gamma": 2.0
+    },
+    "label_smoothing": 0.05,
+    "head": "single MLP 64-32-2",
+    "refit_epochs": "best validation epoch + 1"
+  },
+  "arms": {
+    "A1n": {
+      "kind": "mlp",
+      "topology": null
+    },
+    "A2": {
+      "kind": "a2",
+      "topology": null
+    },
+    "A2s": {
+      "kind": "a2s",
+      "topology": null
+    },
+    "A3": {
+      "kind": "amp",
+      "topology": "ring"
+    },
+    "A4-intra": {
+      "kind": "qecs",
+      "topology": "intra"
+    },
+    "A4-pair": {
+      "kind": "qecs",
+      "topology": "pair"
+    },
+    "A4-ring": {
+      "kind": "qecs",
+      "topology": "ring"
+    },
+    "A4-all": {
+      "kind": "qecs",
+      "topology": "all"
+    },
+    "A5": {
+      "kind": "full",
+      "topology": "ring"
+    }
+  },
+  "classical_grids": {
+    "B1_LogReg": "C in {0.01,0.1,1,10}",
+    "B2_RF/A0_RF/A1_RF": "max_depth {6,12,20} x min_samples_leaf {1,10}, 300 trees",
+    "B3_HistGB": "learning_rate {0.03,0.1} x max_depth {3,6}, 300 iterations"
+  },
+  "statistics": {
+    "bootstrap_resamples": 1000,
+    "student_level": true,
+    "module_clustered": true,
+    "paired_comparisons": "same resamples for both models",
+    "multiplicity": "Holm over all pre-specified paired comparisons x 3 weeks (separately for student-level and module-clustered p)",
+    "seeds_effect_size": "d_z over 5 seeds plus Wilcoxon signed-rank"
+  },
+  "not_done": [
+    "BERT or other genuine text encoder",
+    "T1/T3 robustness targets",
+    "leave-one-module-out",
+    "HQIAT-ML reproduction (B4)",
+    "n > 4 qubits",
+    "noise / shot sensitivity",
+    "centred-QECS as a training signal"
+  ]
+}

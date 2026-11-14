@@ -1,0 +1,110 @@
+final B1_LogReg 12 {'C': 10.0}
+final B2_RF 12 {'max_depth': 6, 'min_samples_leaf': 10}
+final B3_HistGB 12 {'learning_rate': 0.1, 'max_depth': 3}
+final A0_RF 12 {'max_depth': 6, 'min_samples_leaf': 1}
+final A1_RF 12 {'max_depth': 6, 'min_samples_leaf': 1}
+final B1_LogReg 8 {'C': 10.0}
+final B2_RF 8 {'max_depth': 6, 'min_samples_leaf': 1}
+final B3_HistGB 8 {'learning_rate': 0.1, 'max_depth': 3}
+final A0_RF 8 {'max_depth': 6, 'min_samples_leaf': 1}
+final A1_RF 8 {'max_depth': 6, 'min_samples_leaf': 10}
+final B1_LogReg 4 {'C': 10.0}
+final B2_RF 4 {'max_depth': 6, 'min_samples_leaf': 10}
+final B3_HistGB 4 {'learning_rate': 0.03, 'max_depth': 3}
+final A0_RF 4 {'max_depth': 6, 'min_samples_leaf': 1}
+final A1_RF 4 {'max_depth': 6, 'min_samples_leaf': 10}
+final B1_LogReg 12 {'C': 10.0}
+final B2_RF 12 {'max_depth': 6, 'min_samples_leaf': 10}
+final B3_HistGB 12 {'learning_rate': 0.03, 'max_depth': 6}
+final A0_RF 12 {'max_depth': 6, 'min_samples_leaf': 10}
+final A1_RF 12 {'max_depth': 12, 'min_samples_leaf': 10}
+final B1_LogReg 8 {'C': 10.0}
+final B2_RF 8 {'max_depth': 12, 'min_samples_leaf': 10}
+final B3_HistGB 8 {'learning_rate': 0.03, 'max_depth': 3}
+final A0_RF 8 {'max_depth': 6, 'min_samples_leaf': 1}
+final A1_RF 8 {'max_depth': 6, 'min_samples_leaf': 1}
+final B1_LogReg 4 {'C': 10.0}
+final B2_RF 4 {'max_depth': 6, 'min_samples_leaf': 1}
+final B3_HistGB 4 {'learning_rate': 0.03, 'max_depth': 3}
+final A0_RF 4 {'max_depth': 6, 'min_samples_leaf': 10}
+final A1_RF 4 {'max_depth': 12, 'min_samples_leaf': 10}
+refit A4-pair 8 4 test AUC 0.7256 (lr 0.01, 22 epochs) 5s
+refit A4-all 8 0 test AUC 0.7189 (lr 0.003, 33 epochs) 16s
+refit A4-all 8 1 test AUC 0.6822 (lr 0.003, 33 epochs) 17s
+refit A4-all 8 2 test AUC 0.6695 (lr 0.003, 33 epochs) 15s
+refit A4-all 8 3 test AUC 0.7174 (lr 0.003, 33 epochs) 15s
+refit A4-all 8 4 test AUC 0.7254 (lr 0.003, 33 epochs) 15s
+refit A5 8 0 test AUC 0.7145 (lr 0.003, 30 epochs) 14s
+refit A5 8 1 test AUC 0.7257 (lr 0.003, 30 epochs) 13s
+refit A5 8 2 test AUC 0.7078 (lr 0.003, 30 epochs) 13s
+refit A5 8 3 test AUC 0.7347 (lr 0.003, 30 epochs) 13s
+refit A5 8 4 test AUC 0.6932 (lr 0.003, 30 epochs) 13s
+refit A3 8 0 test AUC 0.7068 (lr 0.01, 5 epochs) 1s
+refit A3 8 1 test AUC 0.6992 (lr 0.01, 5 epochs) 1s
+refit A3 8 2 test AUC 0.7146 (lr 0.01, 5 epochs) 1s
+refit A3 8 3 test AUC 0.6892 (lr 0.01, 5 epochs) 1s
+refit A3 8 4 test AUC 0.6942 (lr 0.01, 5 epochs) 1s
+tune A1n 4 0.003 val AUC 0.7086 ep 5
+tune A1n 4 0.01 val AUC 0.7119 ep 2
+tune A2 4 0.003 val AUC 0.6952 ep 9
+tune A2 4 0.01 val AUC 0.6947 ep 2
+tune A2s 4 0.003 val AUC 0.6374 ep 22
+tune A2s 4 0.01 val AUC 0.6600 ep 12
+tune A4-ring 4 0.003 val AUC 0.6698 ep 13
+tune A4-ring 4 0.01 val AUC 0.6779 ep 9
+tune A4-intra 4 0.003 val AUC 0.6339 ep 10
+tune A4-intra 4 0.01 val AUC 0.6409 ep 16
+tune A4-pair 4 0.003 val AUC 0.6775 ep 36
+tune A4-pair 4 0.01 val AUC 0.6735 ep 9
+tune A4-all 4 0.003 val AUC 0.6711 ep 20
+tune A4-all 4 0.01 val AUC 0.6617 ep 6
+tune A5 4 0.003 val AUC 0.6854 ep 35
+tune A5 4 0.01 val AUC 0.6954 ep 10
+tune A3 4 0.003 val AUC 0.6510 ep 16
+tune A3 4 0.01 val AUC 0.6571 ep 7
+refit A1n 4 0 test AUC 0.6452 (lr 0.01, 3 epochs) 0s
+refit A1n 4 1 test AUC 0.6691 (lr 0.01, 3 epochs) 0s
+refit A1n 4 2 test AUC 0.6569 (lr 0.01, 3 epochs) 0s
+refit A1n 4 3 test AUC 0.6642 (lr 0.01, 3 epochs) 0s
+refit A1n 4 4 test AUC 0.6687 (lr 0.01, 3 epochs) 0s
+refit A2 4 0 test AUC 0.6981 (lr 0.003, 10 epochs) 0s
+refit A2 4 1 test AUC 0.7058 (lr 0.003, 10 epochs) 0s
+refit A2 4 2 test AUC 0.7122 (lr 0.003, 10 epochs) 0s
+refit A2 4 3 test AUC 0.7167 (lr 0.003, 10 epochs) 0s
+refit A2 4 4 test AUC 0.7081 (lr 0.003, 10 epochs) 0s
+refit A2s 4 0 test AUC 0.6254 (lr 0.01, 13 epochs) 0s
+refit A2s 4 1 test AUC 0.6700 (lr 0.01, 13 epochs) 0s
+refit A2s 4 2 test AUC 0.6438 (lr 0.01, 13 epochs) 0s
+refit A2s 4 3 test AUC 0.6959 (lr 0.01, 13 epochs) 0s
+refit A2s 4 4 test AUC 0.6638 (lr 0.01, 13 epochs) 0s
+refit A4-ring 4 0 test AUC 0.6801 (lr 0.01, 10 epochs) 3s
+refit A4-ring 4 1 test AUC 0.6839 (lr 0.01, 10 epochs) 3s
+refit A4-ring 4 2 test AUC 0.6518 (lr 0.01, 10 epochs) 3s
+refit A4-ring 4 3 test AUC 0.6880 (lr 0.01, 10 epochs) 3s
+refit A4-ring 4 4 test AUC 0.6843 (lr 0.01, 10 epochs) 3s
+refit A4-intra 4 0 test AUC 0.6334 (lr 0.01, 17 epochs) 4s
+refit A4-intra 4 1 test AUC 0.6463 (lr 0.01, 17 epochs) 3s
+refit A4-intra 4 2 test AUC 0.6740 (lr 0.01, 17 epochs) 3s
+refit A4-intra 4 3 test AUC 0.6474 (lr 0.01, 17 epochs) 3s
+refit A4-intra 4 4 test AUC 0.6869 (lr 0.01, 17 epochs) 3s
+refit A4-pair 4 0 test AUC 0.6807 (lr 0.003, 37 epochs) 9s
+refit A4-pair 4 1 test AUC 0.6848 (lr 0.003, 37 epochs) 10s
+refit A4-pair 4 2 test AUC 0.6803 (lr 0.003, 37 epochs) 9s
+refit A4-pair 4 3 test AUC 0.6787 (lr 0.003, 37 epochs) 9s
+refit A4-pair 4 4 test AUC 0.6893 (lr 0.003, 37 epochs) 10s
+refit A4-all 4 0 test AUC 0.6752 (lr 0.003, 21 epochs) 10s
+refit A4-all 4 1 test AUC 0.6850 (lr 0.003, 21 epochs) 10s
+refit A4-all 4 2 test AUC 0.6850 (lr 0.003, 21 epochs) 10s
+refit A4-all 4 3 test AUC 0.6889 (lr 0.003, 21 epochs) 10s
+refit A4-all 4 4 test AUC 0.6915 (lr 0.003, 21 epochs) 10s
+refit A5 4 0 test AUC 0.6766 (lr 0.01, 11 epochs) 5s
+refit A5 4 1 test AUC 0.6967 (lr 0.01, 11 epochs) 5s
+refit A5 4 2 test AUC 0.6937 (lr 0.01, 11 epochs) 5s
+refit A5 4 3 test AUC 0.6869 (lr 0.01, 11 epochs) 5s
+refit A5 4 4 test AUC 0.6941 (lr 0.01, 11 epochs) 5s
+refit A3 4 0 test AUC 0.6754 (lr 0.01, 8 epochs) 2s
+refit A3 4 1 test AUC 0.6629 (lr 0.01, 8 epochs) 2s
+refit A3 4 2 test AUC 0.6738 (lr 0.01, 8 epochs) 2s
+refit A3 4 3 test AUC 0.6905 (lr 0.01, 8 epochs) 2s
+refit A3 4 4 test AUC 0.6918 (lr 0.01, 8 epochs) 2s
+TARGETS DONE

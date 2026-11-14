@@ -1,0 +1,15 @@
+b21ae57eedb7  IQEL-NET_Q1_Audit_Report.docx
+c5fdf21ad7e9  IQEL-NET_paper_draft_v10.docx
+8dadf7ac342f  analyze.py
+11ef6ca10c48  data_lib.py
+723385a2f2e4  entanglement_diag.csv
+b781c80bf43c  final_auc_ci.csv
+d19411637559  nn_results_n4.csv
+e6ff7b4b826b  paired_diffs.csv
+1ece05459b1f  patch_v10.py
+f3afe863be46  predictions.zip
+b1c4c6d4c093  prep_compact.py
+52e480b150de  qsim.py
+7693b8c003d2  run_trees.py
+3d51ae607eb4  test_qsim.py
+d0ef4308fdcd  train_nn.py

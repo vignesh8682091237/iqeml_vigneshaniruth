@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/user-data/outputs/IQEL-NET_Q1_UPGRADE/experimental_code
+collecting ... collected 20 items
+
+tests/test_protocol.py::test_split_masks_are_disjoint_and_complete PASSED [  5%]
+tests/test_protocol.py::test_preprocessing_never_uses_test_rows PASSED   [ 10%]
+tests/test_protocol.py::test_features_use_no_information_after_the_checkpoint PASSED [ 15%]
+tests/test_protocol.py::test_a2s_is_parameter_matched_to_the_ring_circuit PASSED [ 20%]
+tests/test_simulator.py::test_matches_pennylane[3-intra] PASSED          [ 25%]
+tests/test_simulator.py::test_matches_pennylane[3-pair] PASSED           [ 30%]
+tests/test_simulator.py::test_matches_pennylane[3-ring] PASSED           [ 35%]
+tests/test_simulator.py::test_matches_pennylane[3-all] PASSED            [ 40%]
+tests/test_simulator.py::test_matches_pennylane[4-intra] PASSED          [ 45%]
+tests/test_simulator.py::test_matches_pennylane[4-pair] PASSED           [ 50%]
+tests/test_simulator.py::test_matches_pennylane[4-ring] PASSED           [ 55%]
+tests/test_simulator.py::test_matches_pennylane[4-all] PASSED            [ 60%]
+tests/test_simulator.py::test_cross_modal_edges_are_exactly_the_intended_topology[3] PASSED [ 65%]
+tests/test_simulator.py::test_cross_modal_edges_are_exactly_the_intended_topology[4] PASSED [ 70%]
+tests/test_simulator.py::test_intra_is_a_product_state_across_registers PASSED [ 75%]
+tests/test_simulator.py::test_cross_modal_topologies_entangle[pair] PASSED [ 80%]
+tests/test_simulator.py::test_cross_modal_topologies_entangle[ring] PASSED [ 85%]
+tests/test_simulator.py::test_cross_modal_topologies_entangle[all] PASSED [ 90%]
+tests/test_simulator.py::test_ring_equals_original_simulator PASSED      [ 95%]
+tests/test_simulator.py::test_parameter_counts_n4 PASSED                 [100%]
+
+============================= 20 passed in 46.36s ==============================
+exit code 0
